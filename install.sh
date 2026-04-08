@@ -50,7 +50,7 @@ fi
 mkdir -p "$AGENTS_DIR"
 
 SKILLS=(crew-run crew-idea crew-plan crew-build crew-test crew-deploy crew-status crew-continue)
-AGENTS=(crew-planner crew-builder crew-reviewer crew-tester crew-deployer crew-logger)
+AGENTS=(crew-planner crew-builder crew-reviewer crew-critic crew-tester crew-deployer crew-logger)
 
 # Download skills
 echo -e "${YELLOW}Downloading skills...${NC}"

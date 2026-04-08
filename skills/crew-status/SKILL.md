@@ -21,12 +21,15 @@ Read these files (skip if they don't exist):
 1. `.crew/state.md` — pipeline status
 2. `.crew/tasks.md` — task completion
 3. `.crew/log.md` — last 5 entries only (tail)
+4. Use Glob to check `.crew/reviews/` — count review files
+5. Use Glob to check `.crew/feedback/` — count feedback files
+6. Use Glob to check `.crew/tests/` — count test files
 
 ### Step 3: Display Dashboard
 
 Present a clean dashboard:
 
-```
+```text
 == Claude Crew Status ==
 
 Project: [name]
@@ -35,19 +38,26 @@ Stack: [stack]
 Started: [date]
 
 Pipeline:
-  [x] Idea     — Requirements crystallized
-  [x] Plan     — N phases, M tasks
-  [>] Build    — 5/12 tasks complete
-  [ ] Review
+  [x] Idea       — Requirements crystallized
+  [x] Plan       — N phases, M tasks
+  [>] Build      — 5/12 tasks complete
+  [ ] Review     — N review cycles so far
+  [ ] Feedback   — N feedback cycles so far
   [ ] Test
   [ ] Deploy
 
 Current: Building — [current task description]
 Blocker: [none or description]
 
+Metrics:
+  Review cycles: [N]
+  Feedback cycles: [N]
+  Fix cycles: [N]
+
 Recent Activity:
   [timestamp] Builder — Implemented auth module
-  [timestamp] Reviewer — Approved with 0 issues
+  [timestamp] Reviewer — APPROVED with 0 issues
+  [timestamp] Critic — APPROVED, all requirements met
   [timestamp] Builder — Implemented user API
 ```
 
